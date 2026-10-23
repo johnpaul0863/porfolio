@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Paul Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar" id="home">
+    <a href="#home" class="brand">
+      <span class="dota-logo">D</span>
+      <span>Portfolio</span>
+    </a>
+
+    <button class="menu-toggle" id="menu-toggle"
+      aria-label="Open navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-label">WELCOME, PLAYER</p>
+      <h1>Hi, I'm <span>John Paul</span></h1>
+      <h2>Dota 1 Enthusiast &amp; Web Developer</h2>
+      <p>
+        I love playing Dota 1, exploring its classic gameplay,
+        and learning new things in web development.
+      </p>
+      <a href="#projects" class="fantasy-button">
+        View My Projects »
+      </a>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section class="about panel" id="about">
+    <div class="section-title">
+      <span class="title-icon">D</span>
+      <h2>About Me</h2>
+    </div>
+
+    <div class="about-content">
+      <img
+        class="profile-photo"
+        src="asd.jpg"
+        alt="John Paul's profile picture"
+        onerror="this.style.display='none';document.getElementById('photo-fallback').style.display='flex'"
+      >
+
+      <div class="photo-fallback" id="photo-fallback">
+        Add Your Photo
+      </div>
+
+      <div class="personal-info">
+        <p><strong>Name</strong><span>:</span> John Paul Marcos</p>
+        <p><strong>Age</strong><span>:</span> 22</p>
+        <p><strong>Course</strong><span>:</span> BSIT</p>
+        <p><strong>School</strong><span>:</span>Pambayang Dalunhasaan ng Marilao</p>
+        <p><strong>Location</strong><span>:</span> Bulacan, Philippines</p>
+        <p><strong>Email</strong><span>:</span>JohnPaulMarcos35@gmail.com</p>
+
+        <p class="about-description">
+          A Dota 1 player at heart, and a student on the journey
+          to become a skilled developer.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hobbies -->
+  <section class="hobbies panel" id="hobbies">
+    <div class="section-title">
+      <span class="title-icon">D</span>
+      <h2>My Hobbies</h2>
+    </div>
+
+    <div class="hobby-grid">
+      <article class="hobby-card">
+        <div class="hobby-icon dota-icon">D</div>
+        <h3>Playing Dota 1</h3>
+      </article>
+
+      <article class="hobby-card">
+        <div class="hobby-icon">🎮</div>
+        <h3>Gaming</h3>
+      </article>
+
+      <article class="hobby-card">
+        <div class="hobby-icon">🎬</div>
+        <h3>Watching Movies</h3>
+      </article>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects panel" id="projects">
+    <div class="section-title">
+      <span class="title-icon">D</span>
+      <h2>My Projects</h2>
+    </div>
+
+    <div class="project-grid">
+      <article class="project-card">
+        <img
+          src="proje/Marcos/Screenshot 2026-10-24 061019.png"
+          alt="Login System project preview"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+        >
+        <div class="project-placeholder">ACT2</div>
+
+        
+<div class="project-details">
+  <h3>Fitzone</h3>
+  <p>A simple website for Fitness Zone.</p>
+
+  <a
+    href="file:///C:/Users/Johpaul/Downloads/Marcos-20261008T155714Z-1-001/Marcos/home.html"
+    target="_blank"
+    class="project-button"
+  >
+    View Project »
+  </a>
+</div>
+
+      </article>
+
+      <article class="project-card">
+        <div class="project-art">
+          <span class="dota-logo">D</span>
+          <span>ACT 1 FINALS</span>
+        </div>
+
+        <div class="project-details">
+          <h3>finals activity 1</h3>
+          <p>A activity that enjoyable</p>
+          <a href="file:///F:/portfolio/proje/Marcos_finals_act1/index.html" class="project-button">
+            View Project »
+          </a>
+        </div>
+      </article>
+    </div>
+
+      <article class="project-card">
+        <div class="project-art">
+          <span class="dota-logo">D</span>
+          <span>ACT 2 FINALS</span>
+        </div>
+
+        <div class="project-details">
+          <h3>finals activity 2</h3>
+          <p>A activity that fun</p>
+          <a href="file:///F:/portfolio/proje/MARCOS_FINALS_ACT2-20261008T155934Z-1-001/MARCOS_FINALS_ACT2/index.html" class="project-button">
+            View Project »
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact panel" id="contact">
+    <div class="section-title">
+      <span class="title-icon">D</span>
+      <h2>Contact Me</h2>
+    </div>
+
+    <p>Let's connect! Feel free to reach out.</p>
+
+    <div class="contact-links">
+      <a href="https://github.com/" target="_blank"
+         rel="noopener noreferrer" aria-label="GitHub">GH</a>
+
+      <a href="https://facebook.com/" target="_blank"
+         rel="noopener noreferrer" aria-label="Facebook">f</a>
+
+      <a href="mailto:your-email@gmail.com"
+         aria-label="Send email">✉</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="#home" class="brand">
+      <span class="dota-logo">D</span>
+      <span>DOTA</span>
+    </a>
+
+    <p>© <span id="year"></span> John Paul. All rights reserved.</p>
+
+    <a href="#home" class="back-top">Back to top ▲</a>
+  </footer>
+
+</body>
+</html>

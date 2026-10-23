@@ -1,0 +1,623 @@
+
+:root {
+  --dark: #211811;
+  --dark-panel: #302218;
+  --parchment: #ead0a0;
+  --parchment-light: #f4dfb8;
+  --red: #b52c20;
+  --red-dark: #792016;
+  --text: #28190f;
+  --cream-text: #f3e5c8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text);
+  background: #211811;
+  background-image:
+    radial-gradient(ellipse at top, #493525, transparent 70%);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  min-height: 62px;
+  padding: 8px 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(#38291e, #1d1510);
+  border: 2px solid #6c4a2e;
+  box-shadow: 0 3px 10px #0009;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--cream-text);
+  font-size: 23px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.dota-logo,
+.title-icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--red);
+  color: #26160e;
+  font-size: 34px;
+  font-weight: bold;
+  clip-path: polygon(0 0, 100% 0, 100% 72%, 72% 100%, 0 100%);
+}
+
+.nav-links {
+  display: flex;
+  gap: 6px;
+}
+
+.nav-links a {
+  padding: 9px 17px;
+  color: #e5d1b2;
+  border: 1px solid #8b6845;
+  border-radius: 4px;
+  background: linear-gradient(#302116, #19110c);
+  transition: 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: white;
+  background: linear-gradient(#c4422d, #7e2017);
+  border-color: #e0a25b;
+}
+
+.menu-toggle {
+  display: none;
+  color: var(--cream-text);
+  background: var(--red-dark);
+  border: 1px solid #b78c5a;
+  padding: 7px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* HOME BANNER */
+
+.hero {
+  min-height: 295px;
+  display: flex;
+  align-items: center;
+  padding: 35px 6%;
+  color: var(--cream-text);
+  background:
+    linear-gradient(90deg, #16150de8 0%, #292316c7 42%, #21181122 100%),
+    url("https://cdn.cloudflare.steamstatic.com/steam/apps/570/header.jpg")
+    center 40% / cover no-repeat;
+  border-bottom: 5px ridge #80603c;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 620px;
+}
+
+.hero-label {
+  color: #d3a76b;
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 5vw, 55px);
+  line-height: 1.15;
+  margin-bottom: 5px;
+  text-shadow: 2px 3px 4px #000;
+}
+
+.hero h1 span {
+  color: #d3442e;
+}
+
+.hero h2 {
+  font-size: clamp(17px, 2.3vw, 24px);
+  margin-bottom: 8px;
+}
+
+.hero-content > p:not(.hero-label) {
+  max-width: 530px;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.fantasy-button,
+.project-button {
+  display: inline-block;
+  color: #fff0d4;
+  background: linear-gradient(#a63824, #681b13);
+  border: 2px ridge #c49b65;
+  padding: 8px 18px;
+  font-weight: bold;
+  box-shadow: 0 3px 5px #0005;
+  transition: 0.2s;
+}
+
+.fantasy-button:hover,
+.project-button:hover {
+  background: linear-gradient(#ce5032, #8b261a);
+  transform: translateY(-2px);
+}
+
+/* COMMON PANELS */
+
+.panel {
+  margin: 10px 1.5%;
+  padding: 22px 2%;
+  background:
+    radial-gradient(ellipse at center, #f7dfb6 0%, #e8c999 75%, #c6a06c 100%);
+  border: 5px ridge #725333;
+  box-shadow: inset 0 0 18px #7d542c55, 0 4px 8px #0005;
+  position: relative;
+  scroll-margin-top: 80px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.title-icon {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #6e3d22;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  color: #3a2113;
+  text-shadow: 1px 1px #fff0cf;
+}
+
+/* ABOUT ME */
+
+.about-content {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  align-items: center;
+  gap: 35px;
+}
+
+.profile-photo,
+.photo-fallback {
+  width: 100%;
+  height: 235px;
+  object-fit: cover;
+  border: 6px ridge #725333;
+  outline: 1px solid #4a2b19;
+  background: #3b2b1d;
+}
+
+.photo-fallback {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream-text);
+  text-align: center;
+}
+
+.personal-info {
+  min-width: 0;
+}
+
+.personal-info > p:not(.about-description) {
+  display: grid;
+  grid-template-columns: 105px 12px minmax(0, 1fr);
+  gap: 7px;
+  align-items: start;
+  margin-bottom: 4px;
+  font-size: 17px;
+}
+
+.personal-info strong {
+  color: #792719;
+}
+
+.personal-info p span {
+  font-weight: bold;
+}
+
+.personal-info .about-description {
+  margin-top: 12px;
+  font-size: 17px;
+}
+
+/* HOBBIES */
+
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  padding: 8px 10px;
+}
+
+.hobby-card {
+  text-align: center;
+  padding: 10px;
+}
+
+.hobby-icon {
+  width: 125px;
+  height: 125px;
+  max-width: 100%;
+  margin: 0 auto 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #31231a, #110d0a);
+  border: 5px ridge #87633d;
+  box-shadow: 0 3px 6px #0005;
+  color: #e6d8c5;
+  font-family: Arial, sans-serif;
+  font-size: 47px;
+}
+
+.hobby-icon.dota-icon {
+  color: #c83b2b;
+  font-size: 65px;
+  font-weight: bold;
+}
+
+.hobby-card h3 {
+  font-size: 18px;
+}
+
+/* PROJECTS */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+
+.project-card {
+  display: grid;
+  grid-template-columns: 165px minmax(0, 1fr);
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border: 2px ridge #8a6843;
+  background: #e7c798;
+
+  /* Bawasan ang laki */
+  max-width: 600px;
+  width: 100%;
+}
+
+.project-card > img,
+.project-placeholder,
+.project-art {
+  width: 100%;
+  height: 125px;
+  object-fit: cover;
+  border: 4px ridge #775536;
+}
+
+.project-placeholder {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #35251b;
+  color: #e5cba2;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.project-art {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: linear-gradient(#302117, #100c09);
+  color: #e7d4b6;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.project-art .dota-logo {
+  width: 70px;
+  height: 70px;
+  font-size: 58px;
+}
+
+.project-details {
+  min-width: 0;
+}
+
+.project-details h3 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.project-details p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.project-button {
+  padding: 5px 12px;
+  font-size: 14px;
+}
+
+/* CONTACT */
+
+.contact {
+  text-align: center;
+}
+
+.contact .section-title {
+  justify-content: center;
+}
+
+.contact > p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.contact-links a {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px ridge #80603c;
+  background: linear-gradient(#33241a, #100c09);
+  color: #f4e2c7;
+  font-family: Arial, sans-serif;
+  font-size: 27px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.contact-links a:hover {
+  color: #e14b34;
+  transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+.footer {
+  min-height: 75px;
+  padding: 14px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: linear-gradient(#2d2118, #130e0a);
+  color: #e4d0b0;
+  border: 3px ridge #725333;
+}
+
+.footer .brand {
+  font-size: 20px;
+}
+
+.footer .dota-logo {
+  width: 38px;
+  height: 38px;
+}
+
+.footer p {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.back-top {
+  color: #d84730;
+  font-weight: bold;
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+  .navbar {
+    padding: 8px 3%;
+  }
+
+  .nav-links a {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .about-content {
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 8px 4%;
+  }
+
+  .brand {
+    font-size: 19px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 8px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .hero {
+    min-height: 330px;
+    padding: 35px 6%;
+    background-position: 58% center;
+  }
+
+  .hero h1 {
+    font-size: 37px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  .hero-content > p:not(.hero-label) {
+    font-size: 14px;
+  }
+
+  .panel {
+    margin: 8px 2%;
+    padding: 17px 4%;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .profile-photo,
+  .photo-fallback {
+    max-width: 280px;
+    height: 245px;
+    margin: auto;
+  }
+
+  .personal-info > p:not(.about-description) {
+    grid-template-columns: 90px 8px minmax(0, 1fr);
+    font-size: 14px;
+    gap: 5px;
+  }
+
+  .personal-info .about-description {
+    font-size: 15px;
+  }
+
+  .hobby-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+    padding: 0;
+  }
+
+  .hobby-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+
+  .hobby-icon.dota-icon {
+    font-size: 43px;
+  }
+
+  .hobby-card h3 {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .project-card {
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 10px;
+    padding: 7px;
+  }
+
+  .project-card > img,
+  .project-placeholder,
+  .project-art {
+    height: 110px;
+  }
+
+  .project-details h3 {
+    font-size: 17px;
+  }
+
+  .project-details p {
+    font-size: 13px;
+  }
+
+  .project-button {
+    font-size: 12px;
+    padding: 5px 7px;
+  }
+
+  .contact > p {
+    font-size: 15px;
+  }
+
+  .contact-links a {
+    width: 52px;
+    height: 52px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
