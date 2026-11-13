@@ -1,0 +1,1215 @@
+
+/* =========================================
+   KATLYN PURAS - PINK FLORAL PORTFOLIO
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg: #fffaf6;
+    --card: #ffffff;
+    --text: #493d3a;
+    --muted: #8e7771;
+    --primary: #c98591;
+    --secondary: #f4dce0;
+    --border: #f0e4df;
+    --shadow: 0 10px 30px rgba(190, 105, 125, 0.10);
+}
+
+/* DARK MODE - IMPORTANT: body.dark */
+body.dark {
+    --bg: #211d20;
+    --card: #30282e;
+    --text: #f8e9eb;
+    --muted: #c1aeb5;
+    --primary: #e6a0b5;
+    --secondary: #49343e;
+    --border: #493d44;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background .3s, color .3s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-size: 12px;
+    color: var(--muted);
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.theme-btn,
+.menu-btn {
+    background: var(--secondary);
+    color: var(--text);
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    font-size: 19px;
+    transition: .3s;
+}
+
+.theme-btn:hover,
+.menu-btn:hover {
+    transform: scale(1.1);
+    background: var(--primary);
+    color: white;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.section {
+    padding: 100px 8%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading > p:first-child {
+    color: var(--primary);
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+    letter-spacing: 3px;
+    color: var(--primary);
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* =========================================
+   HOME / HERO
+========================================= */
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.small-title {
+    color: var(--primary);
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 85px);
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.hero h2 {
+    color: var(--primary);
+    font-size: 24px;
+    letter-spacing: 4px;
+    margin: 15px 0;
+}
+
+.course,
+.location {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.location {
+    margin: 12px 0 28px;
+    font-size: 13px;
+}
+
+.main-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-size: 13px;
+    transition: .3s;
+}
+
+.main-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px #c9859140;
+}
+
+.hero-image {
+    position: relative;
+    width: 320px;
+    height: 390px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 48% 48% 15px 15px;
+    border: 8px solid var(--card);
+    box-shadow: var(--shadow);
+}
+
+.image-decoration {
+    position: absolute;
+    right: -25px;
+    top: 20px;
+    font-size: 55px;
+    color: var(--primary);
+}
+
+/* =========================================
+   ABOUT ME
+========================================= */
+
+.about {
+    background: var(--secondary);
+    max-width: none;
+    padding: 80px 5%;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+}
+
+.about-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 12px 12px 0 var(--primary);
+}
+
+.about-info {
+    width: 100%;
+    max-width: 750px;
+    margin: auto;
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: 150px 20px minmax(0, 1fr);
+    align-items: center;
+    width: 100%;
+    min-height: 58px;
+    padding: 12px 25px;
+    margin-bottom: 10px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+}
+
+.info-label,
+.info-colon {
+    color: var(--primary);
+    font-weight: 700;
+    text-align: center;
+}
+
+.info-label,
+.info-value {
+    font-size: 14px;
+}
+
+.info-value {
+    color: var(--text);
+    padding-left: 20px;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================
+   MY LUVS
+========================================= */
+
+.myluvs {
+    background: var(--bg);
+    max-width: 100%;
+    padding: 100px 8%;
+}
+
+.luvs-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.luv-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .35s ease;
+    box-shadow: var(--shadow);
+}
+
+.luv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(190, 105, 125, .15);
+}
+
+.luv-image {
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+    background: var(--secondary);
+}
+
+.luv-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.luv-card:hover .luv-image img {
+    transform: scale(1.07);
+}
+
+.luv-heart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 38px;
+    height: 38px;
+    background: white;
+    color: #d17e91;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+}
+
+.luv-info {
+    padding: 25px;
+}
+
+.luv-number {
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.luv-info h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: var(--text);
+}
+
+.luv-info p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+    min-height: 45px;
+}
+
+.view-more {
+    display: inline-block;
+    margin-top: 18px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =========================================
+   MY LUVS MODAL
+========================================= */
+
+.luv-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(35, 23, 29, .75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    backdrop-filter: blur(6px);
+}
+
+.luv-modal.show {
+    display: flex;
+}
+
+.luv-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 950px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--card);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    animation: modalAppear .3s ease;
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.luv-close {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    z-index: 5;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--secondary);
+    color: var(--primary);
+    font-size: 26px;
+}
+
+.luv-close:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.modal-gallery {
+    padding: 30px;
+    background: var(--secondary);
+}
+
+.main-photo {
+    height: 380px;
+    width: 100%;
+    border-radius: 13px;
+    overflow: hidden;
+    background: var(--border);
+}
+
+.main-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.photo-thumbnails img {
+    width: 100%;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+.photo-thumbnails img:hover,
+.photo-thumbnails img.active {
+    border-color: var(--primary);
+}
+
+.modal-details {
+    padding: 65px 35px 35px;
+    background: var(--card);
+}
+
+.modal-label {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.modal-details h2 {
+    color: var(--text);
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.modal-description {
+    font-size: 13px;
+    line-height: 1.9;
+    color: var(--muted);
+}
+
+.modal-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 25px 0;
+}
+
+.modal-details h3 {
+    color: var(--text);
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.detail-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    font-size: 12px;
+    gap: 10px;
+}
+
+.detail-item strong {
+    color: var(--primary);
+}
+
+.detail-item span {
+    color: var(--text);
+}
+
+.modal-note {
+    display: flex;
+    gap: 12px;
+    background: var(--secondary);
+    padding: 16px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.modal-note span {
+    color: var(--primary);
+    font-size: 22px;
+}
+
+.modal-note p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills {
+    background: var(--secondary);
+    max-width: none;
+}
+
+.skills-grid,
+.projects-grid {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-card,
+.project-card {
+    padding: 30px;
+    border-radius: 15px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    transition: .3s;
+    box-shadow: var(--shadow);
+}
+
+.skill-card:hover,
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px #00000012;
+}
+
+.skill-card > span {
+    font-size: 32px;
+}
+
+.skill-card h3 {
+    margin: 15px 0 20px;
+}
+
+.skill-card p {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 10px 0 5px;
+}
+
+.progress {
+    height: 7px;
+    background: var(--secondary);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+/* =========================================
+   GAMES
+========================================= */
+
+.game-filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    padding: 9px 22px;
+    background: var(--secondary);
+    color: var(--text);
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+.games-grid {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.game-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+}
+
+.game-card.hidden {
+    display: none;
+}
+
+.game-art {
+    height: 180px;
+    display: grid;
+    place-items: center;
+    font-size: 60px;
+}
+
+.art-one {
+    background: linear-gradient(135deg, #77634c, #d6b18b);
+}
+
+.art-two {
+    background: linear-gradient(135deg, #667e9f, #d2a5b9);
+}
+
+.art-three {
+    background: linear-gradient(135deg, #9d5b5f, #e4b6a3);
+}
+
+.art-four {
+    background: linear-gradient(135deg, #49525e, #a7a7a7);
+}
+
+.game-info {
+    padding: 18px;
+}
+
+.game-info h3 {
+    font-size: 15px;
+}
+
+.game-info p {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 5px;
+}
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+.projects-grid {
+    align-items: stretch;
+}
+
+.project-card {
+    min-height: 220px;
+    overflow: hidden;
+    padding: 0 0 25px;
+    border-radius: 18px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-icon,
+.project-card h3,
+.project-card p,
+.project-card a {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.project-icon {
+    color: var(--primary);
+    font-size: 35px;
+    font-weight: 800;
+    margin-top: 18px;
+}
+
+.project-card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.project-card a {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact {
+    background: var(--secondary);
+    max-width: none;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 650px;
+    margin: auto;
+}
+
+.contact-content h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.contact-content p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 2;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.social-links a {
+    background: var(--primary);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-size: 13px;
+    transition: .3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-4px);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: var(--card);
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 2;
+    border-top: 1px solid var(--border);
+}
+
+/* =========================================
+   FALLING SAKURA
+========================================= */
+
+#flower-container {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 150;
+}
+
+.sakura-petal {
+    position: absolute;
+    top: -40px;
+    display: block;
+    font-size: 20px;
+    opacity: .85;
+    animation: sakuraFall linear forwards;
+    pointer-events: none;
+    user-select: none;
+}
+
+@keyframes sakuraFall {
+    0% {
+        transform: translate3d(0, -40px, 0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: .9;
+    }
+
+    50% {
+        transform: translate3d(65px, 50vh, 0) rotate(180deg);
+    }
+
+    100% {
+        transform: translate3d(-45px, 110vh, 0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================================
+   MUSIC BUTTON
+========================================= */
+
+#soundToggle {
+    background: #ffe0ed;
+    color: #d66b98;
+    border: 1px solid #f4b5ce;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    font-size: 21px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(214, 107, 152, .15);
+    transition: .3s;
+}
+
+#soundToggle:hover {
+    transform: scale(1.12);
+    background: #f7b8d1;
+    color: white;
+}
+
+#soundToggle.playing {
+    animation: musicPulse 1s infinite alternate;
+}
+
+@keyframes musicPulse {
+    from {
+        box-shadow: 0 0 5px #f3a6c4;
+    }
+
+    to {
+        box-shadow: 0 0 18px #ed8eb5;
+    }
+}
+
+/* DARK MODE BUTTON */
+body.dark .theme-btn {
+    background: var(--secondary);
+    color: #ffd6e5;
+}
+
+body.dark #soundToggle {
+    background: var(--secondary);
+    color: #ffd6e5;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 950px) {
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .luvs-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .luv-modal-content {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+    }
+
+    .main-photo {
+        height: 300px;
+    }
+
+    .modal-details {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        padding: 15px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+        padding: 5px 0;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 65px;
+    }
+
+    .hero-image {
+        width: 230px;
+        height: 280px;
+    }
+
+    .hero h2 {
+        font-size: 17px;
+    }
+
+    .section {
+        padding: 75px 7%;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image {
+        max-width: 260px;
+        margin: auto;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .game-art {
+        height: 130px;
+    }
+
+    .game-info {
+        padding: 12px;
+    }
+
+    .game-info h3 {
+        font-size: 13px;
+    }
+
+    .timeline-item {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-info {
+        max-width: 100%;
+    }
+
+    .info-row {
+        grid-template-columns: 85px 15px minmax(0, 1fr);
+        padding: 12px 10px;
+        min-height: 58px;
+    }
+
+    .info-label,
+    .info-value {
+        font-size: 12px;
+    }
+
+    .info-value {
+        padding-left: 8px;
+    }
+}
+
+@media (max-width: 550px) {
+    .luvs-container {
+        grid-template-columns: 1fr;
+    }
+
+    .luv-image {
+        height: 280px;
+    }
+
+    .luv-modal {
+        padding: 10px;
+    }
+
+    .modal-gallery {
+        padding: 20px;
+    }
+
+    .main-photo {
+        height: 250px;
+    }
+
+    .modal-details h2 {
+        font-size: 24px;
+    }
+
+    .photo-thumbnails img {
+        height: 60px;
+    }
+}
+
+@media (max-width: 380px) {
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .sakura-petal {
+        display: none;
+    }
+
+    * {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+    }
+}
+
+/* FALLING SAKURA */
+
+#flower-container {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 90;
+}
+
+.sakura-petal {
+    position: absolute;
+    top: -40px;
+    animation: sakuraFall linear forwards;
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+@keyframes sakuraFall {
+    0% {
+        transform: translateY(-40px) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateY(110vh) translateX(100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+/* SAKURA PETALS FALLING */
+
+#flower-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+.sakura-petal {
+    position: absolute;
+    top: -40px;
+    display: block;
+    animation: sakuraFall linear forwards;
+    opacity: 0.9;
+}
+
+@keyframes sakuraFall {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(50vh) translateX(60px) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(110vh) translateX(-50px) rotate(360deg);
+        opacity: 0;
+    }
+}
