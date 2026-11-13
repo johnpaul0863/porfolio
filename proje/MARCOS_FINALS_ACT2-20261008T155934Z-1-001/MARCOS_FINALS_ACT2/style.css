@@ -1,0 +1,78 @@
+
+body {
+    text-align: center;
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aquamarine;
+}
+
+/* Image design */
+img {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+h1 {
+    color: darkslategray;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+button {
+    background-color: royalblue;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin: 8px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: darkblue;
+    transform: scale(1.05);
+}
+
+/* Message */
+#Message {
+    font-weight: bold;
+    font-size: 20px;
+    color: darkslategray;
+    margin-top: 25px;
+}
+
+/* Profile, Grades, Schedule */
+#profile,
+#grades,
+#schedule {
+    background-color: white;
+    color: #333;
+    padding: 15px;
+    margin: 12px auto;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    body {
+        padding: 25px 12px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    button {
+        padding: 13px 20px;
+    }
+}
